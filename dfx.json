@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "ic01": {
+      "type": "motoko",
+      "main": "src/ic01/main.mo"
+    },
+    "ic01_assets": {
+      "type": "assets",
+      "source": [
+        "src/ic01_assets/assets"
+      ],
+      "dependencies": [
+        "ic01"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "vessel sources",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
